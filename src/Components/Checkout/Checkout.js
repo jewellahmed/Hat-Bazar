@@ -10,7 +10,7 @@ const Checkout = () => {
     
     useEffect(() => {
 
-        fetch('http://localhost:5055/products')
+        fetch('https://tranquil-shelf-05104.herokuapp.com/products')
             .then(res => res.json())
         .then(data => {
             setProducts(data)

@@ -15,7 +15,7 @@ const AddProducts = () => {
             imageURL:imageURL
 
         };
-        const url = `http://localhost:5055/addProduct`;
+        const url = `https://tranquil-shelf-05104.herokuapp.com/addProduct`;
 
 
         console.log(productData)
