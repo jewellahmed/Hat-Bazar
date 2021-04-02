@@ -1,0 +1,18 @@
+.productStyle img{
+    width:110px;
+    margin-left:50px;
+    
+
+}
+.productStyle h3{
+
+    margin-left: 15px;
+
+}
+.productStyle h4{
+    margin-left:100px;
+}
+.productStyle{
+
+    background-color: rgb(223, 235, 230);
+}
