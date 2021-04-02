@@ -28,7 +28,7 @@ const Product = (props) => {
             <h3>{name}<br/>{price}</h3>
             
 
-            <Link to={`/checkout/from/${name}`} style={btnStyle}><button>Buy Now</button></Link>
+            <Link to={`/checkout/from/${_id}`} style={btnStyle}><button>Buy Now</button></Link>
 
         </div>
     );

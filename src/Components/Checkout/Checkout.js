@@ -1,38 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 
 
 const Checkout = () => {
 
-
-
+    const{id}= useParams();
+    const [loggedInUser, setLoggedInUser]= useContext(UserContext);
     const [products, setProducts] = useState([]);
-    
+    const{productId} = useParams();
     useEffect(() => {
 
-        fetch('https://tranquil-shelf-05104.herokuapp.com/products')
-            .then(res => res.json())
-        .then(data => {
-            setProducts(data)
-        })
+        fetch(`https://tranquil-shelf-05104.herokuapp.com/products/${productId}`)
+        .then(res => res.json())
+        .then(data => setProducts(data))
+    },[])
 
-    }, [products])
-    // const currentRide = products.find()
-    // console.log(products)
-    // const { goods } = useParams();
-    // const currentProduct = products.find(products => products.name === goods);
-    // console.log(currentProduct)
 
-   
-    // console.log(goods);
+
+    // console.log(data);
    
     
     return (
         <div>
             <h3>Here</h3>
 
-           {/* <h3>{currentProduct.name}</h3>
-           <h3>{currentProduct.price}</h3> */}
+           {
+               products.map(pd => <li>{pd.name}</li>)
+           }
         </div>
     );
 };

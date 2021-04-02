@@ -81,7 +81,7 @@ function App() {
           {/* <PrivateRoute path="/checkout">
             <Checkout />
           </PrivateRoute> */}
-          <PrivateRoute path="/checkout/from/:goods">
+          <PrivateRoute  path="/checkout/from/:productId">
 
             <Checkout/>
 
